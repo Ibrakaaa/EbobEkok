@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int num1, num2, little;
+        int ebob = 1, ekok = 1;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Lütfen Birinci Sayiyi Giriniz : ");
+        num1 = input.nextInt();
+
+        System.out.print("Lütfen Ikinci Sayiyi Giriniz : ");
+        num2 = input.nextInt();
+
+        if (num1 > num2) {
+            little = num2;
+
+        } else {
+            little = num1;
+        }
+        int a = little;
+        while (a >= 1) {
+            if ((num1 % a == 0) && (num2 % a == 0)) {
+                ebob = a;
+                System.out.println("Ebob : " + a);
+
+                break;
+            }
+            a--;
+
+
+        }
+        System.out.print("Ekok : " + (num1 * num2) / ebob);
+    }
+}
